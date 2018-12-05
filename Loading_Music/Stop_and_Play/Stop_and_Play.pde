@@ -14,11 +14,12 @@ void setup () {
   //size(): Console output, not visial data promptos only, not complete yet
 
   minim = new Minim(this); //load from data directory, loadFile should also load from libray
-  song1 = minim.loadFile("song name");
+  song1 = minim.loadFile("5PM - Animal Crossing New Leaf Music.mp3");
 
   println("Start of Console");
   println("Click the Console to Finsih Starting this program");
   println("Press P to Play and Pause");
+  println("Press S to Stop");
 }
 
 void draw() {
