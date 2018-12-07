@@ -7,8 +7,8 @@ void musicPlayerGUI_Setup() {
   rect(width*4/16, height*2/14, width*8/16, width*15/18, 10);
 
   //Play and Pause Button
-  triangle(width*4/16, height*2/16, width*5/16, height*3/16 - height*1/24, width*4/16, height*3/16); //Play
-  //line() //Pause 1
+  triangle(width*8/16, height*11/16 - height*1/24, width*9/16 - width*1/45, height*10/16 + height*1/24, width*8/16, height*11/16);//Play
+  rect(width*8/16 - width*1/24, height*10/16, width*0.5/16, width*1.5/16); //Pause 1 need to be fixed and update in the Musicplayerbutton when fixed.
   //line() //Pause 2
 
   //Next and Previous Buttons
