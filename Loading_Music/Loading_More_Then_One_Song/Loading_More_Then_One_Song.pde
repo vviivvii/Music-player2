@@ -17,7 +17,8 @@ void setup () {
   minim = new Minim(this); //load from data directory, loadFile should also load from libray
   song[0] = minim.loadFile("5PM - Animal Crossing New Leaf Music.mp3");
   song[1] = minim.loadFile("Kenai - Nobody Knows.mp3");
-  song[2] = minim.loadFile("Kenai – I like like you ♡  chill out music beats to studyrelax.mp3");
+  song[2] = minim.loadFile("Kenai – I like like you ♡  chill out music beats to studyrelax.mp3"); 
+}
 
   void keyPressed() {
     int currentSong = 0;
