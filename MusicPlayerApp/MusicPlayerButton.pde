@@ -12,6 +12,8 @@ void musicPlayerButton() {
     }
   println(playButton);
   
+  if (playButton == true) song1.play();
+  if (playButton == false) song1.pause();
 }
 //Next
 //Previous

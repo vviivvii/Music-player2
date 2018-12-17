@@ -1,9 +1,5 @@
-color red2 = #FF0000;
-color green = #0AFF32;
-color regularButton2 = red2;
-color hoverOverButton2 = green;
-
-void musicPlayerGUI_Setup() {
+void setup() {
+  size (900, 700);
   background(193, 193, 193);
 
   rect(width*0, height*14/16 + height*1/22, width*1/16, width*1/16); // logo
