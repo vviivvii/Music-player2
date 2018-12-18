@@ -7,7 +7,9 @@ import ddf.minim.ugens.*;
 
 //Global Variables
 Minim minim;
-AudioPlayer song1;
+int numberOfSongs = 5;
+AudioPlayer[] song = new AudioPlayer[numberOfSongs];
+int currentSong = numberOfSongs - numberOfSongs; //Uses formula or FileIO Memory
 
 void setup () {
   size (900, 700);
@@ -18,7 +20,11 @@ void setup () {
 
   //Songs
   minim = new Minim(this); //load from data directory, loadFile should also load from libray
-  song1 = minim.loadFile("5PM - Animal Crossing New Leaf Music.mp3");
+  song[0] = minim.loadFile("5PM - Animal Crossing New Leaf Music.mp3");
+  song[1] = minim.loadFile("mr. hong  bittersweet chocolate.mp3");
+  song[2] = minim.loadFile("stream_error - sometimes.mp3");
+  song[3] = minim.loadFile("Kenai – I like like you chill out music beats to studyrelax.mp3");
+  song[4] = minim.loadFile("Kenai - Nobody Knows.mp3");
 
   musicPlayerGUI_Setup();
   //Music_Visualzersetup();
