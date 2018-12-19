@@ -17,9 +17,14 @@ void musicPlayerGUI_Setup() {
   ellipse(width*4/16 - width*1/40, height*14/16 + height*1/12, width*1/16 - width*1/60, width*1/16 - width*1/60); //play
   ellipse(width*3/16 - width*1/40, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50); //back
   ellipse(width*5/16 - width*1/40, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50); //next
-  ellipse(width*9/16 + width*1/100, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50); //
+  ellipse(width*9/16 + width*1/100, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50); //stop
   ellipse(width*15/16 + width*1/60, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50);//Loop
 
+//--------------------New_Button-------------------------
+  triangle(width*5/19 + width*1/65, height*39/40 - height*1/24, width*5/19 + width*2/55, height*34/35 - height*2/100, width*5/19 + width*1/65, height*39/40);
+  rect(width*13/40 - width*1.1/40, height*15/16 - height*1/400, width*0.5/100, width*3/100);
+  //ellipse(width*5/16 - width*1/40, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50);
+//-------------------------------------------------------
   //Volume Buttons
   fill(255);
   ellipse(width*0.5/16, height*2/16, width*1/16 - width*1/50, width*1/16 - width*1/50);//up
@@ -27,9 +32,10 @@ void musicPlayerGUI_Setup() {
   //---------------------------Box_1-----------------------------------
   rect(width*3/16, height*2/16, width*3/16, width*4/16, 15);
   fill(33);
-  text("song1-name", width*3/16 + width*1/50, height*7/16 + height*1/35);
+  text("5PM - Animal Crossing New Leaf Music", width*3/16 + width*1/50, height*7/16 + height*1/35);
   fill(140);
-  text("song1-artist", width*3/16 + width*1/50, height*8/16 - height*1/55);
+  text("Official Music for", width*3/16 + width*1/50, height*8/16 - height*1/55);
+  text("Animal Crossing New Leaf", width*3/16 + width*1/50, height*8.3/16 - height*1/55);
   fill(255);
   //---------------------------Box_2-----------------------------------  
   rect(width*7/16, height*2/16, width*3/16, width*4/16, 15);
