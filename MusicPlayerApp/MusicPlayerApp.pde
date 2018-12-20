@@ -23,8 +23,8 @@ void setup () {
   song[0] = minim.loadFile("5PM - Animal Crossing New Leaf Music.mp3");
   song[1] = minim.loadFile("mr. hong  bittersweet chocolate.mp3");
   song[2] = minim.loadFile("stream_error - sometimes.mp3");
-  song[3] = minim.loadFile("Kenai – I like like you chill out music beats to studyrelax.mp3");
-  song[4] = minim.loadFile("Kenai - Nobody Knows.mp3");
+  song[3] = minim.loadFile("Kenai – I like, like you chill out music beats to studyrelax.mp3");
+  song[4] = minim.loadFile("Bryce Fox - SAD! (XXXTentacion Cover).mp3");
 
   musicPlayerGUI_Setup();
   //Music_Visualzersetup();

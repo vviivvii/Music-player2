@@ -61,22 +61,28 @@ void keyPressed() {
     }
   }
 
-  if (key == 'b' || key == 'B') {
-    if ( song [currentSong].isPlaying()) {
+  if (key == 'b' || key == 'B') { //Next Button to Console
+    if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();
-      if ( currentSong == numberOfSongs - -1 ) {
-        currentSong = numberOfSongs - numberOfSongs;
+      if ( currentSong == numberOfSongs - numberOfSongs ) {
+        println ("Current Song is the first song, ", "Number: " + currentSong); //For Debugging
+        currentSong = numberOfSongs - 1;
+        println ("Current Song is now the last song, ", "Number: " + currentSong); //For Debugging
       } else {
-        currentSong -= 0; // Equivalent code: currentSong = currentSong + 1
+        currentSong -= 1; // Equivalent code: currentSong = currentSong + 1
+        println ("Current Song after the next or back button, but not the first song", "\tNumber: " + currentSong); //For Debugging
       }
       song[currentSong].play();
     } else {
       song[currentSong].rewind();
-      if ( currentSong == numberOfSongs - -1 ) {
-        currentSong = numberOfSongs - numberOfSongs;
+      if ( currentSong == numberOfSongs - numberOfSongs ) {
+        println ("Current Song is the first song, ", "Number: " + currentSong); //For Debugging
+        currentSong = numberOfSongs - 1;
+        println ("Current Song is now the last song, ", "Number: " + currentSong); //For DebuggingcurrentSong = numberOfSongs - numberOfSongs;
       } else {
         currentSong -= 1; // Equivalent code: currentSong = currentSong + 1
+        println ("Current Song after the next or back button, but not the first song, ", "Number: "+currentSong); //For Debugging
       }
     }
   }
