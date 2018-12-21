@@ -11,6 +11,7 @@ void musicPlayerButton() {
       playButton = true;
     }
   //println(playButton); if play button does not work
+  
   //Play-Pause Song
   if (mouseX>width*3/15 && mouseX<width*3.7/15 && mouseY>height*23.1/25 && mouseY<height*20.6/21)
     if ( song[currentSong].isPlaying() ) {
@@ -21,6 +22,7 @@ void musicPlayerButton() {
     } else {
       song[currentSong].play();
     }
+    
   //Next
   if (mouseX>width*4/15 && mouseX<width*4.6/15 && mouseY>height*23.1/25 && mouseY<height*20.6/21) {
     if (song[currentSong].isPlaying()) {
@@ -92,7 +94,7 @@ void musicPlayerButton() {
   }
 
 //forward
-if ( mouseX>width*1/15 && mouseX<width*14.6/15 && mouseY>height*23.1/25 && mouseY<height*20.6/21) song[currentSong].skip(1000);
+if ( mouseX>width*1/15 && mouseX<width*1.6/15 && mouseY>height*4.1/25 && mouseY<height*4.6/21) song[currentSong].skip(1000);
 //Volume Down
 
 }

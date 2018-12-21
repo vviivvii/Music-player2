@@ -29,6 +29,8 @@ void MusicPlayerGUIDraw () {
       rect(width*10/40 - width*2.1/60, height*15/16 - height*1/400, width*1/100, width*3/100);
     }
   }
+  
+  
 
 
   //Next Button
