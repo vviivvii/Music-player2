@@ -7,6 +7,7 @@ PImage pic2;
 PImage pic3;
 PImage pic4;
 PImage pic5;
+PImage Loop;
 
 void musicPlayerGUI_Setup() {
   background(193, 193, 193);
@@ -24,16 +25,23 @@ void musicPlayerGUI_Setup() {
   ellipse(width*5/16 - width*1/40, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50); //next
   ellipse(width*9/16 + width*1/100, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50); //stop
   ellipse(width*15/16 + width*1/60, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50);//Loop
+  Loop= loadImage("Loop.png");
+  image(Loop, width*15/16 - width*1/300, height*15/16 - height*1/145, width*1/16 - width*1/50, width*1/16 - width*1/50);
 
   //--------------------Making_A_New_Button-------------------------
-  triangle(width*3/19 + width*1/65, height*39/40 - height*1/24, width*2.3/19 + width*2/55, height*34/35 - height*2/100, width*3/19 + width*1/65, height*39/40);
-  rect(width*7/40 - width*0.9/40, height*15/16 - height*1/400, width*0.5/100, width*3/100);
-  //ellipse(width*3/16 - width*1/40, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50);
-  //-------------------------------------------------------
-  //Volume Buttons
+
+  //----------------------------------------------------------------
+  
+  //forward and back Buttons
   fill(255);
-  ellipse(width*0.5/16, height*2/16, width*1/16 - width*1/50, width*1/16 - width*1/50);//up
-  ellipse(width*0.5/16, height*3/16 + height*1/40, width*1/16 - width*1/50, width*1/16 - width*1/50);//down
+  ellipse(width*0.5/16, height*2/16, width*1/16 - width*1/50, width*1/16 - width*1/50);//forward
+  fill(0);
+  text("F", 25, 93);
+  fill(255);
+  ellipse(width*0.5/16, height*3/16 + height*1/40, width*1/16 - width*1/50, width*1/16 - width*1/50);//back
+  fill(0);
+  text("B", 25,155);
+  fill(255);
   //---------------------------Box_1-----------------------------------
   rect(width*3/16, height*2/16, width*3/16, width*4/16, 15);
   pic1= loadImage("maxresdefault.jpg"); // Dimensions width 1280 height 720

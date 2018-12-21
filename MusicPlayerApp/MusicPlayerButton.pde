@@ -75,6 +75,24 @@ void musicPlayerButton() {
       }
     }
   }
-}
-//Volume Up
+  
+  //Loop
+  if ( mouseX>width*14/15 && mouseX<width*14.6/15 && mouseY>height*23.1/25 && mouseY<height*20.6/21) {
+    println ("Pressed Loop button");
+    if ( song[currentSong].isPlaying() ) {
+      println ("isPlaying", song[currentSong].isPlaying());
+      if (song[currentSong].isLooping()) {
+        println ("isLooping()", song[currentSong].isLooping());
+        song[currentSong].play();
+      }
+    } else {
+      println ("isPlaying", song[currentSong].isPlaying());
+      song[currentSong].loop();
+    }
+  }
+
+//forward
+if ( mouseX>width*1/15 && mouseX<width*14.6/15 && mouseY>height*23.1/25 && mouseY<height*20.6/21) song[currentSong].skip(1000);
 //Volume Down
+
+}

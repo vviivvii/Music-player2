@@ -65,10 +65,28 @@ void MusicPlayerGUIDraw () {
 //Song1
 if ( song[0].isPlaying() )
   {
-    text("Now Playing", 50, 20 );
+    fill(255);
+    text("Now Playing", 180, 80 );
   }
   else
   {
-    //rect(
+    noStroke();
+    fill(193);
+    rect(width*3/16, height*0.7/16, width*2/16, width*1/16);
+    stroke(1);
   }
+  
+ //Song2
+ /*if ( song[1].isPlaying() ) //This bug I think won't work 
+  {
+    text("Now Playing", 250, 80 );
+  }
+  else
+  {
+    noStroke();
+    fill(193);
+    rect(width*3/16, height*0.7/16, width*2/16, width*1/16);
+    stroke(1);
+  }
+  */
 }
