@@ -94,7 +94,7 @@ void musicPlayerButton() {
   }
 
 //forward
-if ( mouseX>width*1/15 && mouseX<width*1.6/15 && mouseY>height*4.1/25 && mouseY<height*4.6/21) song[currentSong].skip(1000);
-//Volume Down
-
+if ( mouseX>width*0.1/15 && mouseX<width*0.8/15 && mouseY>height*2.1/25 && mouseY<height*3.1/21) song[currentSong].skip(1000);
+//back
+if ( mouseX>width*0.1/15 && mouseX<width*0.8/15 && mouseY>height*4.3/25 && mouseY<height*5/21) song[currentSong].skip(-1000);
 }
