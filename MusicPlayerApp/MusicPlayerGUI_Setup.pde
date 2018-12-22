@@ -31,7 +31,7 @@ void musicPlayerGUI_Setup() {
   //--------------------Making_A_New_Button-------------------------
 
   //----------------------------------------------------------------
-  
+
   //forward and back Buttons
   fill(255);
   ellipse(width*0.5/16, height*2/16, width*1/16 - width*1/50, width*1/16 - width*1/50);//forward
@@ -40,7 +40,7 @@ void musicPlayerGUI_Setup() {
   fill(255);
   ellipse(width*0.5/16, height*3/16 + height*1/40, width*1/16 - width*1/50, width*1/16 - width*1/50);//back
   fill(0);
-  text("B", 25,155);
+  text("B", 25, 155);
   fill(255);
   //---------------------------Box_1-----------------------------------
   rect(width*3/16, height*2/16, width*3/16, width*4/16, 15);
