@@ -9,6 +9,11 @@ import ddf.minim.ugens.*;
 Minim minim;
 int numberOfSongs = 5;
 AudioPlayer[] song = new AudioPlayer[numberOfSongs];
+AudioPlayer sound1;
+AudioPlayer sound2;
+AudioPlayer sound3;
+AudioPlayer sound4;
+AudioPlayer sound5;
 int currentSong = numberOfSongs - numberOfSongs; //Uses formula or FileIO Memory
 
 void setup () {
@@ -25,6 +30,13 @@ void setup () {
   song[2] = minim.loadFile("stream_error - sometimes.mp3");
   song[3] = minim.loadFile("Kenai – I like, like you chill out music beats to studyrelax.mp3");
   song[4] = minim.loadFile("Bryce Fox - SAD! (XXXTentacion Cover).mp3");
+  
+  //Sounds
+  sound1 = minim.loadFile("Beep_Short.mp3");
+  sound2 = minim.loadFile("Pen_Clicking.mp3");
+  sound3 = minim.loadFile("Winding_Alarm_Clock.mp3");
+  sound4 = minim.loadFile("Cartoon_Boing.mp3");
+  sound5 = minim.loadFile("Instrument_Strum.mp3");
 
   musicPlayerGUI_Setup();
   //Music_Visualzersetup();
