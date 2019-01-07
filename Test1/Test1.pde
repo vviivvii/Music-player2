@@ -39,10 +39,11 @@ void draw() {
     line( x1, 100 + song1.right.get(i)*50, x2, 100 + song1.right.get(i+1)*50 );
   }
   
-  //Draw a line to show where in the song playback is currently located
+  //Draw a line to show where in the song playback is currently located              {This is the one}
   float posx = map(song1.position(), 0, song1.length(), 0, width);
+  rect(width*1/16, height*8/16, width*15/16, width*1/16);
   stroke(0,200,0);
-  line(posx, 0, posx, height);
+  line(posx, width*4/15, posx, height*5/15);
   
   //Draw text depending on whether music is playing
   if ( song1.isPlaying() )
