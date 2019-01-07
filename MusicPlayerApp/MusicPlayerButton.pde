@@ -92,6 +92,15 @@ void musicPlayerButton() {
       song[currentSong].loop();
     }
   }
+  //Stop
+  if ( mouseX>width*8.2/15 && mouseX<width*8.9/15 && mouseY>height*23.1/25 && mouseY<height*20.6/21) {
+   song[currentSong].pause();
+    song[currentSong].rewind();
+    if (song[currentSong].isPlaying() ) {
+    } else { //song not playing
+      song[currentSong].rewind();
+    }
+  }
 
 //forward
 if ( mouseX>width*0.1/15 && mouseX<width*0.8/15 && mouseY>height*2.1/25 && mouseY<height*3.1/21) song[currentSong].skip(1000);

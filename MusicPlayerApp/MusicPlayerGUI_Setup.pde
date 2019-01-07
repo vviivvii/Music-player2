@@ -29,7 +29,8 @@ void musicPlayerGUI_Setup() {
   image(Loop, width*15/16 - width*1/300, height*15/16 - height*1/145, width*1/16 - width*1/50, width*1/16 - width*1/50);
 
   //--------------------Making_A_New_Button-------------------------
-
+  fill(0);
+  rect(width*9/16 - width*1/400, height*15/16 + height*1/400, width*0.4/16, width*0.4/16);
   //----------------------------------------------------------------
 
   //forward and back Buttons
