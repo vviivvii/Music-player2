@@ -85,7 +85,7 @@ void MusicPlayerGUIDraw () {
    {
    noStroke();
    fill(193);
-   rect(width*3/16, height*0.7/16, width*2/16, width*0.4/16);
+   rect(width*3/16, height*1.3/16, width*2/16, width*0.5/16);
    stroke(1);
    }
    /*
