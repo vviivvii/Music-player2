@@ -22,6 +22,7 @@ void quitButtonDraw () {
     fill(0, 0, 0);
     textSize(13);
     text("Quit", width*14/16, height*1/32);
+    
   }
 }
 

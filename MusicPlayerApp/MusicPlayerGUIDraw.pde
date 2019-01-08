@@ -59,7 +59,7 @@ void MusicPlayerGUIDraw () {
     rect(width*7/40 - width*0.9/40, height*15/16 - height*1/400, width*0.5/100, width*3/100);
   }
 
- //Stop
+  //Stop
   if (mouseX>width*8.2/15 && mouseX<width*8.9/15 && mouseY>height*23.1/25 && mouseY<height*20.6/21) { //Next Button
     fill(hoverOverButton2);
     ellipse(width*9/16 + width*1/100, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50);
@@ -71,23 +71,26 @@ void MusicPlayerGUIDraw () {
     fill(0);
     rect(width*9/16 - width*1/400, height*15/16 + height*1/400, width*0.4/16, width*0.4/16);
   }
+  //Visualzer
+  fill(200);
+  rect(width*0, height*0/16, width*16/16, width*0.8/16);
 
-
+  
   //Song1
-  if ( song[0].isPlaying() )
-  {
-    fill(255);
-    text("Now Playing", 180, 80 );
-  } else
-  {
-    noStroke();
-    fill(193);
-    rect(width*3/16, height*0.7/16, width*2/16, width*1/16);
-    stroke(1);
-  }
-
+   if ( song[0].isPlaying() )
+   {
+   fill(255);
+   text("Now Playing", 180, 80 );
+   } else
+   {
+   noStroke();
+   fill(193);
+   rect(width*3/16, height*0.7/16, width*2/16, width*0.4/16);
+   stroke(1);
+   }
+   /*
   //Song2
-  /*if ( song[1].isPlaying() ) //This bug I think won't work 
+  if ( song[1].isPlaying() ) //This bug I think won't work 
    {
    text("Now Playing", 250, 80 );
    }

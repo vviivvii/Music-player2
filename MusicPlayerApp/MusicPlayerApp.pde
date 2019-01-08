@@ -30,7 +30,7 @@ void setup () {
   song[2] = minim.loadFile("stream_error - sometimes.mp3");
   song[3] = minim.loadFile("Kenai – I like, like you chill out music beats to studyrelax.mp3");
   song[4] = minim.loadFile("Bryce Fox - SAD! (XXXTentacion Cover).mp3");
-  
+
   //Sounds
   sound1 = minim.loadFile("Beep_Short.mp3");
   sound2 = minim.loadFile("Pen_Clicking.mp3");
@@ -39,13 +39,13 @@ void setup () {
   sound5 = minim.loadFile("Instrument_Strum.mp3");
 
   musicPlayerGUI_Setup();
-  //Music_Visualzersetup();
 }
 
 void draw() {
-  quitButtonDraw ();
-  //Music_Viaulzerdraw();
+
   MusicPlayerGUIDraw ();
+  //quitButtonDraw ();
+  Music_Visualzer();
 }
 
 void mouseClicked() {

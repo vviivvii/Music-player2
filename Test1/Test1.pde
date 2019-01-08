@@ -8,14 +8,15 @@ import ddf.minim.ugens.*;
 
 //Global Variables
 Minim minim;
-AudioPlayer song1;
-
+int numberOfSongs = 1;
+AudioPlayer[] song = new AudioPlayer[numberOfSongs];
+int currentSong = numberOfSongs - numberOfSongs;
 void setup() {
   size(500, 600); //Console output, not visual data, text promptos only, not complete yet
   //Might need to add parametery, like size(512, 200, P3D);
   
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder
-  song1 = minim.loadFile("Kenai – I like like you chill out music beats to studyrelax.mp3");
+  song[0] = minim.loadFile("Kenai – I like like you chill out music beats to studyrelax.mp3");
 
   println("Start of Console");
   println("Click the Console to Finish Starting this program");
@@ -31,22 +32,22 @@ void draw() {
   //  so we need to scale them up to see the waveform
   //Note: that if the file is MONO, left.get() and right.get() will return the same value
   
-  for(int i = 0; i < song1.bufferSize() - 1; i++)
+  for(int i = 0; i < song[currentSong].bufferSize() - 1; i++)
   {
-    float x1 = map( i, 0, song1.bufferSize(), 0, width );
-    float x2 = map( i+1, 0, song1.bufferSize(), 0, width );
-    line( x1, 50 + song1.left.get(i)*50, x2, 50 + song1.left.get(i+1)*50 );
-    line( x1, 100 + song1.right.get(i)*50, x2, 100 + song1.right.get(i+1)*50 );
+    float x1 = map( i, 0, song[currentSong].bufferSize(), 0, width );
+    float x2 = map( i+1, 0, song[currentSong].bufferSize(), 0, width );
+    line( x1, 20 + song[currentSong].left.get(i)*30, x2, 20 + song[currentSong].left.get(i+1)*30 );
+    //line( x1, 100 + song[currentSong].right.get(i)*50, x2, 100 + song[currentSong].right.get(i+1)*50 );
   }
   
   //Draw a line to show where in the song playback is currently located              {This is the one}
-  float posx = map(song1.position(), 0, song1.length(), 0, width);
-  rect(width*1/16, height*8/16, width*15/16, width*1/16);
+  float posx = map(song[currentSong].position(), 0, song[currentSong].length(), 0, width);
+  rect(width*1/16, height*8/16, width*13/16, width*1/16);
   stroke(0,200,0);
-  line(posx, width*4/15, posx, height*5/15);
+  line(posx, width*6/15, posx, height*8/15);
   
   //Draw text depending on whether music is playing
-  if ( song1.isPlaying() )
+  if ( song[currentSong].isPlaying() )
   {
     text("Press p or P to PAUSE.", 10, 20 );
   }
@@ -61,13 +62,13 @@ void mousePressed() {
 
 void keyPressed() {
   if (key == 'p' || key == 'P') {
-    if ( song1.isPlaying() ) {
-      song1.pause();
-    } else if ( song1.position() == song1.length() ) {
-      song1.rewind();
-      song1.play();
+    if ( song[currentSong].isPlaying() ) {
+      song[currentSong].pause();
+    } else if ( song[currentSong].position() == song[currentSong].length() ) {
+      song[currentSong].rewind();
+      song[currentSong].play();
     } else {
-      song1.play();
+      song[currentSong].play();
     }
   }
 } //End of keyPressed()

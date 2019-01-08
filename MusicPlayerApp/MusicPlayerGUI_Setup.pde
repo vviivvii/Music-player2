@@ -8,17 +8,19 @@ PImage pic3;
 PImage pic4;
 PImage pic5;
 PImage Loop;
+PImage CS10;
 
 void musicPlayerGUI_Setup() {
   background(193, 193, 193);
-
   rect(width*0, height*14/16 + height*1/22, width*1/16, width*1/16); // logo
+  CS10= loadImage("CS10.png");
+  image(CS10, width*0, height*14/16 + height*1/22, width*1/16, width*1/16);
   fill(210, 210, 210);
   rect(width*1/16, height*14/16 + height*1/22, width*15/16, width*1/16);//bottom bar
   fill(40);
   rect(width*9/16 + width*1/25, height*14/16 + height*1/18, width*5/16, width*1/23); //song bar
   fill(40, 40, 40);
-  rect(width*0, height*0, width*1/16, height*14/16 + height*1/23); // left bar (black)
+  rect(width*0, height*1/16, width*1/16, height*13/16 + height*1/22); // left bar (black)
   fill(255, 255, 255);
   ellipse(width*4/16 - width*1/40, height*14/16 + height*1/12, width*1/16 - width*1/60, width*1/16 - width*1/60); //play
   ellipse(width*3/16 - width*1/40, height*14/16 + height*1/12, width*1/16 - width*1/50, width*1/16 - width*1/50); //back
@@ -29,8 +31,7 @@ void musicPlayerGUI_Setup() {
   image(Loop, width*15/16 - width*1/300, height*15/16 - height*1/145, width*1/16 - width*1/50, width*1/16 - width*1/50);
 
   //--------------------Making_A_New_Button-------------------------
-  fill(0);
-  rect(width*9/16 - width*1/400, height*15/16 + height*1/400, width*0.4/16, width*0.4/16);
+
   //----------------------------------------------------------------
 
   //forward and back Buttons
