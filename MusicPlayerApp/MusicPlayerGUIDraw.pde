@@ -73,7 +73,7 @@ void MusicPlayerGUIDraw () {
   }
   //Visualzer
   fill(200);
-  rect(width*0, height*0/16, width*16/16, width*0.8/16);
+  rect(width*0, height*0/16, width*16/16, width*0.9/16);
 
   
   //Song1
@@ -88,9 +88,10 @@ void MusicPlayerGUIDraw () {
    rect(width*3/16, height*1.3/16, width*2/16, width*0.5/16);
    stroke(1);
    }
-   /*
+   
   //Song2
-  if ( song[1].isPlaying() ) //This bug I think won't work 
+  /*
+  if ( song[1].isPlaying() ) //This won't work because when more then one "Now Playing" code.
    {
    text("Now Playing", 250, 80 );
    }
@@ -98,7 +99,7 @@ void MusicPlayerGUIDraw () {
    {
    noStroke();
    fill(193);
-   rect(width*3/16, height*0.7/16, width*2/16, width*1/16);
+   rect(width*3/16, height*0.7/16, width*2/16, width*0.5/16);
    stroke(1);
    }
    */

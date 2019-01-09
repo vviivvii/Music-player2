@@ -14,6 +14,7 @@ AudioPlayer sound2;
 AudioPlayer sound3;
 AudioPlayer sound4;
 AudioPlayer sound5;
+AudioPlayer soundClose;
 int currentSong = numberOfSongs - numberOfSongs; //Uses formula or FileIO Memory
 
 void setup () {
@@ -37,6 +38,7 @@ void setup () {
   sound3 = minim.loadFile("Winding_Alarm_Clock.mp3");
   sound4 = minim.loadFile("Cartoon_Boing.mp3");
   sound5 = minim.loadFile("Instrument_Strum.mp3");
+  soundClose = minim.loadFile("Screen_Door_Close.mp3");
 
   musicPlayerGUI_Setup();
 }
@@ -44,7 +46,7 @@ void setup () {
 void draw() {
 
   MusicPlayerGUIDraw ();
-  //quitButtonDraw ();
+  quitButtonDraw ();
   Music_Visualzer();
 }
 

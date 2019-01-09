@@ -50,6 +50,8 @@ void musicPlayerButton() {
       }
       song[currentSong].play();
     } else {
+      sound1.play();
+      sound1.rewind();
       song[currentSong].rewind();
       if ( currentSong == numberOfSongs - 1 ) {
         //println ("Current Song is the last song, ", "Number: "+currentSong); //For Debugging

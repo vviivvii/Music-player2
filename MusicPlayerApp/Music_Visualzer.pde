@@ -10,7 +10,7 @@ void Music_Visualzer() {
 
     float posx = map(song[currentSong].position(), 0, song[currentSong].length(), 0, width);
     stroke(0, 200, 0);
-    line(posx, width*0.8/16, posx, height*0/16);
+    line(posx, width*0.9/16, posx, height*0/16);
 
     stroke(2);
   }
